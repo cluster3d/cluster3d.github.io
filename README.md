@@ -7,3 +7,5 @@ We introduce the first large scale dataset and benchmark for non-categorical ann
 You can download the dataset via [our google drive link](https://drive.google.com/drive/folders/1SiF6Olze-cnAD7Axca_KZEcm1ONlXjd1?usp=sharing). This google drive folder contains the following zip files: 
 1. similarity-#.npz which contains the annotation matrix for the dataset. There are three .npz files, and each is corresponding to one of our three annotators.
 2. obj.csv such that row x or column x of the similarity.npz matrix corresponds to the object ID in the x position in the csv file.
+3. group.csv which contains object ID for initial groups for users to annotate. 
+4. data.json includes the annotation. The similarities fields shows the grouping that annotator believe each group shares same features. The cluster ID field is corresponding to group.csv.
