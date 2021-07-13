@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/stylesheets/sidebar.css">
+
+<div id="container" style="background-color: #E0E0E0;">
+    <form id="general" method="POST" action="/taxonomy/submit">
+        <h6 id={{cluster_ID}} class="id-text">Cluster ID: {{cluster_ID}}</h6>
+        {{!-- <p class="text-center">Product Classification</p>
+        <select class="form-control" id="product-classification-seletor" name="productClassification">
+            <option value="" selected disabled>Please select</option>
+            <option value="Mechanical Sys and Components">Mechanical Sys and Components</option>
+            <option value="Electrical Systems">Electrical Systems</option>
+            <option value="Electro-Mechanical Systems">Electro-Mechanical Systems</option>
+        </select>
+        <select class="form-control" id="first-level-category-selector" name="firstCategory" style="display: none;">
+            <option value="" selected disabled>Please select</option>
+        </select>
+        <select class="form-control" id="sec-level-category-selector" name="secCategory" style="display: none;">
+            <option value="" selected disabled>Please select</option>
+        </select>
+        <select class="form-control" id="third-level-category-selector" name="thirdCategory" style="display: none;">
+            <option value="" selected disabled>Please select</option>
+        </select>
+         --}}
+        <div class="btn-div">
+            <button type="button" class="btn btn-info btn-sm" type="button" id="check-all-btn">Check All</button>
+            <button type="button" class="btn btn-info btn-sm" type="button" id="un-check-all-btn">Uncheck All</button>
+        </div>
+        <div class="btn-div"> 
+            <button class="btn btn-primary" type="button" id="submit-btn">Submit</button>
+            <button class="btn btn-secondary" type="button" id="skip-btn">Skip</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,82 @@
+div#container {
+    padding: 10px;
+    width: 350px;
+    background-color: white;
+    margin-top: 56px;
+    padding-bottom: 70px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    overflow-y: scroll;
+}
+
+.text-center {
+    margin-bottom: 10px;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+textarea {
+    margin-bottom: 10px;
+}
+
+#myTab {
+    margin-bottom: 10px;
+}
+
+.btn-div {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.toggle-div {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#btn-toggle-model {
+    margin-bottom: 10px;
+}
+
+#sub-material-selector-0  {
+    display: none;
+}
+
+#first-sub-process-selector {
+    display: none;
+}
+
+#second-sub-process-selector {
+    display: none;
+}
+
+#submit-btn {
+    margin-right: 5px;
+}
+
+#skip-btn {
+    margin-left: 5px;
+}
+
+#check-all-btn {
+    margin-right: 5px;
+}
+
+#un-check-all-btn {
+    margin-left: 5px;
+}
+
+.id-text {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,183 @@
+<link rel="stylesheet" href="/stylesheets/sidebar.css">
+<div id="container">
+    <form id="general" method="POST" action="/test">
+        <h6 class="text-center">Choose File</h6>
+        <select class="form-control"   id="file-selector" name="objectId">
+        {{#each hello}}
+            <option value="{{this}}">{{this}}</option>
+        {{/each}}
+        </select>
+
+        {{!-- <div class="toggle-div">
+            <h6 class="text-center">Viewport</h6>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" id="btn-toggle">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="options" id="single" autocomplete="off" data-viewmode="0" checked> Single
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="multiple" autocomplete="off" data-viewmode="1"> Multiple
+                </label>
+            </div>
+        </div> --}}
+
+        <div class="toggle-div">
+            <h6 class="text-center">Model</h6>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" id="btn-toggle-model">
+                <label class="btn btn-secondary active">
+                    <input type="radio" id="toggle-single" autocomplete="off" data-modelmode="single"> Single 
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" id="toggle-multiple" autocomplete="off" data-modelmode="complete"> Complete 
+                </label>
+            </div>
+        </div>
+
+        <h5 class="text-center">General Part Info</h5>
+        <hr>
+        <h6 id="file-id-txt">File ID: </h6>
+        <h7 id="decimated-txt">This model has been decimated. <br/> </h7>
+        <a id="file-link" target="_blank" rel="noopener noreferrer" href="">Model Link</a> / 
+        <a id="file-link-2" target="_blank" rel="noopener noreferrer" href="">Model Link-2</a>
+        <p class="text-center">Component Type</p>
+        <select class="form-control" id="component-type" name="componentType">
+            <option value="" selected disabled>Please select</option>
+            <option value="Standard Part">Standard Part</option>
+            <option value="Non-Standard Part">Non-Standard Part</option>
+            <option value="Assembly">Assembly</option>
+        </select>
+        <p class="text-center">Model Type</p>
+        <select class="form-control" id="model-type" name="modelType">
+            <option value="" selected disabled>Please select</option>
+            <option value="solid model">Solid Model</option>
+            <option value="surface model">Surface Model</option>
+            <option value="invalid model">Invalid Model</option>
+        </select>
+        <p class="text-center">Part Description</p>
+        <textarea class="form-control" id="part-description" rows="2" name="partDescription"></textarea>
+        <p class="text-center">Product Category</p>
+        <select class="form-control"   id="product-seletor" name="productCategory">
+            <option value="" selected disabled>Please select</option>
+            <option value="Aerospace">Aerospace</option>
+            <option value="Agriculture">Agriculture</option>
+            <option value="Automobile">Automobile</option>
+            <option value="Children Toy">Children Toy</option>
+            <option value="Construction">Construction</option>
+            <option value="Educational">Educational</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Fishing">Fisheries, Fishing</option>
+            <option value="General Transportation">General Transportation</option>
+            <option value="Home Goods">Home Goods</option>
+            <option value="Industrial Component">Industrial Component</option>
+            <option value="Medical Device">Medical Device</option>
+            <option value="Oil & Gas">Oil & Gas</option>
+            <option value="Paper Products">Paper Products</option>
+            <option value="Wood & Furniture">Wood & Furniture</option>
+            <option value="None">None</option>
+        </select>
+        <p class="text-center">Product Classification</p>
+        <select class="form-control" id="product-classification-seletor" name="productClassification">
+            <option value="" selected disabled>Please select</option>
+            <option value="Mechanical Sys and Components">Mechanical Sys and Components</option>
+            <option value="Electrical Systems">Electrical Systems</option>
+            <option value="Electro-Mechanical Systems">Electro-Mechanical Systems</option>
+        </select>
+        <select class="form-control" id="first-level-category-selector" name="firstCategory" style="display: none;">
+            <option value="" selected disabled>Please select</option>
+        </select>
+        <select class="form-control" id="sec-level-category-selector" name="secCategory" style="display: none;">
+            <option value="" selected disabled>Please select</option>
+        </select>
+        <select class="form-control" id="third-level-category-selector" name="thirdCategory" style="display: none;">
+            <option value="" selected disabled>Please select</option>
+        </select>
+
+
+        <p class="text-center">Wiki URL</p>
+        <input class="form-control" id="wiki-url" name="wikiUrl">
+        <h5 class="text-center">Process Info</h5>
+        <hr>
+        <p class="text-center">Material</p>
+        <select class="form-control material-selector"  id="material-selector-0" name="materialCategory">
+            <option value="" selected disabled>Please select</option>
+            <option value="Ceramics">Ceramics</option>
+            <option value="Composites">Composites</option>
+            <option value="Concrete">Concrete</option>
+            <option value="Electronic/Optical">Electronic/Optical</option>
+            <option value="Glass">Glass</option>
+            <option value="Metals">Metals</option>
+            <option value="Polymers & Plastics">Polymers & Plastics</option>
+            <option value="Wood">Wood</option>
+            <option value="Rubber">Rubber</option>
+            <option value="Silicone">Silicone</option>
+        </select>
+        <select class="form-control"   id="sub-material-selector-0" name="subMaterialCategory">
+            <option value="" selected disabled>Please select</option>
+        </select>
+        <div id='add-mat-dropdown-div'>
+
+        </div>
+        <button class="btn btn-primary" type="button" id="add-mat-btn" style="border-radius: 7px; margin-right:10px; margin-bottom:15px">Add material</button>
+        <button class="btn btn-danger" type="button" id="del-mat-btn" style="border-radius: 7px; margin-bottom:15px">Remove</button>
+        <p class="text-center">Quantity Produced</p>
+        <select class="form-control"   id="quantity-produced-selector" name="quantityProduced">
+            <option value="" selected disabled>Please select</option>
+            <option value="Mass Production">Mass Production</option>
+            <option value="Limited Quantity">Limited Quantity</option>
+            <option value="One Quantity">One Quantity</option>
+        </select>
+        <p class="text-center">Precision Needed</p>
+        <select class="form-control" id="precision-needed-selector" name="precisionNeeded">
+            <option value="" selected disabled>Please select</option>
+            <option value="Standard Tolerance">Standard Tolerance</option>
+            <option value="High Precision">High Precision</option>
+            <option value="Unknown">Unknown</option>
+        </select>
+        <p class="text-center">Main Process Category</p>
+        <select class="form-control process-selector"   id="first-process-selector" name="mainProcessCategory">
+            <option value="" selected disabled>Please select</option>
+            <option value="Additive Manufacturing">Additive Manufacturing</option>
+            <option value="Casting">Casting</option>
+            <option value="CNC Machining">CNC Machining</option>
+            <option value="Coating">Coating</option>
+            <option value="Engraving">Engraving</option>
+            <option value="Extrusion">Extrusion</option>
+            <option value="Forming">Forming</option>
+            <option value="Injection Molding">Injection Molding</option>
+            <option value="Joining">Joining</option>
+            <option value="Molding">Molding</option>
+            <option value="Other">Other</option>
+        </select>
+        <select class="form-control"   id="first-sub-process-selector" name="subMainProcessCategory">
+            <option value="" selected disabled>Please select</option>
+        </select>
+        <p class="text-center">Second Process</p>
+        <select class="form-control process-selector"   id="second-process-selector" name="secondProcessCategory">
+            <option value="" selected disabled>Please select</option>
+            <option value="Additive Manufacturing">Additive Manufacturing</option>
+            <option value="Casting">Casting</option>
+            <option value="CNC Machining">CNC Machining</option>
+            <option value="Coating">Coating</option>
+            <option value="Engraving">Engraving</option>
+            <option value="Extrusion">Extrusion</option>
+            <option value="Forming">Forming</option>
+            <option value="Injection Molding">Injection Molding</option>
+            <option value="Joining">Joining</option>
+            <option value="Molding">Molding</option>
+            <option value="Other">Other</option>
+        </select>
+        <select class="form-control"   id="second-sub-process-selector" name="subSecondProcessCategory">
+            <option value="" selected disabled>Please select</option>
+        </select>
+        <p class="text-center">Good Quality</p>
+        <select class="form-control" id="good-quality" name="goodQuality">
+            <option value="" selected disabled>Please select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <div class="btn-div">
+            <button class="btn btn-primary" type="submit" id="submit-btn">Submit</button>
+            <button class="btn btn-secondary" type="button" id="skip-btn">Skip</button>
+        </div>
+    </form>
+</div>

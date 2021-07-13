@@ -1,0 +1,26 @@
+{
+  "name": "3d-annotation",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-handlebars": "^3.1.0",
+    "firebase": "^7.8.2",
+    "firebase-admin": "^8.6.1",
+    "handlebars": "^4.7.3",
+    "hbs": "^4.1.0",
+    "http-errors": "~1.6.3",
+    "jquery": "^3.4.1",
+    "js-yaml": "^3.13.1",
+    "morgan": "~1.9.1",
+    "nodemon": "^1.19.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}

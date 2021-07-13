@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="/stylesheets/batchAssign.css">
+<div id="main-container">
+  <form action="/batch-assign/assign-user" method="POST">
+    <div class="form-group">
+      <label for="exampleFormControlSelect2">Models</label>
+      <select multiple class="form-control" name="batchObject" id="exampleFormControlSelect2">
+        {{!-- <option value="0-99">0-99</option>
+        <option value="100-199">100-199</option>
+        <option value="200-299">200-299</option>
+        <option value="300-399">300-399</option>
+        <option value="400-499">400-499</option>
+        <option value="500-599">500-599</option>
+        <option value="600-699">600-699</option>
+        <option value="700-799">700-799</option>
+        <option value="800-899">800-899</option>
+        <option value="900-999">900-999</option> --}}
+        {{!-- <option value="1000-1099">1000-1099</option>
+        <option value="1100-1199">1100-1199</option>
+        <option value="1200-1299">1200-1299</option>
+        <option value="1300-1399">1300-1399</option>
+        <option value="1400-1499">1400-1499</option>
+        <option value="1500-1599">1500-1599</option>
+        <option value="1600-1699">1600-1699</option>
+        <option value="1700-1799">1700-1799</option>
+        <option value="1800-1899">1800-1899</option>
+        <option value="1900-1999">1900-1999</option> --}}
+        {{!-- <option value="2000-2099">2000-2099</option>
+        <option value="2100-2199">2100-2199</option>
+        <option value="2200-2299">2200-2299</option>
+        <option value="2300-2399">2300-2399</option>
+        <option value="2400-2499">2400-2499</option>
+        <option value="2500-2599">2500-2599</option>
+        <option value="2600-2699">2600-2699</option>
+        <option value="2700-2799">2700-2799</option>
+        <option value="2800-2899">2800-2899</option>
+        <option value="2900-2999">2900-2999</option>
+        <option value="3000-3099">3000-3099</option>
+        <option value="3100-3199">3100-3199</option>
+        <option value="3200-3299">3200-3299</option>
+        <option value="3300-3399">3300-3399</option>
+        <option value="3400-3499">3400-3499</option>
+        <option value="3500-3599">3500-3599</option>
+        <option value="3600-3699">3600-3699</option>
+        <option value="3700-3799">3700-3799</option>
+        <option value="3800-3899">3800-3899</option>
+        <option value="3900-3999">3900-3999</option> --}}
+        {{!-- <option value="4000-4099">4000-4099</option>
+        <option value="4100-4199">4100-4199</option>
+        <option value="4200-4299">4200-4299</option>
+        <option value="4300-4399">4300-4399</option>
+        <option value="4400-4499">4400-4499</option>
+        <option value="4500-4599">4500-4599</option>
+        <option value="4600-4699">4600-4699</option>
+        <option value="4700-4799">4700-4799</option>
+        <option value="4800-4899">4800-4899</option>
+        <option value="4900-4999">4900-4999</option> --}}
+        {{!-- <option value="5000-5099">5000-5099</option>
+        <option value="5100-5199">5100-5199</option>
+        <option value="5200-5299">5200-5299</option>
+        <option value="5300-5399">5300-5399</option>
+        <option value="5400-5499">5400-5499</option>
+        <option value="5500-5599">5500-5599</option>
+        <option value="5600-5699">5600-5699</option>
+        <option value="5700-5799">5700-5799</option>
+        <option value="5800-5899">5800-5899</option>
+        <option value="5900-5999">5900-5999</option>
+        <option value="6000-6099">6000-6099</option>
+        <option value="6100-6199">6100-6199</option>
+        <option value="6200-6299">6200-6299</option>
+        <option value="6300-6399">6300-6399</option>
+        <option value="6400-6499">6400-6499</option>
+        <option value="6500-6599">6500-6599</option>
+        <option value="6600-6699">6600-6699</option>
+        <option value="6700-6799">6700-6799</option>
+        <option value="6800-6899">6800-6899</option>
+        <option value="6900-6999">6900-6999</option> --}}
+        <option value="7000-7099">7000-7099</option>
+        <option value="7100-7199">7100-7199</option>
+        <option value="7200-7299">7200-7299</option>
+        <option value="7300-7399">7300-7399</option>
+        <option value="7400-7499">7400-7499</option>
+        <option value="7500-7599">7500-7599</option>
+        <option value="7600-7699">7600-7699</option>
+        <option value="7700-7799">7700-7799</option>
+        <option value="7800-7899">7800-7899</option>
+        <option value="7900-7999">7900-7999</option>
+        <option value="8000-8099">8000-8099</option>
+        <option value="8100-8199">8100-8199</option>
+        <option value="8200-8299">8200-8299</option>
+        <option value="8300-8399">8300-8399</option>
+        <option value="8400-8499">8400-8499</option>
+        <option value="8500-8599">8500-8599</option>
+        <option value="8600-8699">8600-8699</option>
+        <option value="8700-8799">8700-8799</option>
+        <option value="8800-8899">8800-8899</option>
+        <option value="8900-8999">8900-8999</option>
+        <option value="9000-9099">9000-9099</option>
+        <option value="9100-9199">9100-9199</option>
+        <option value="9200-9299">9200-9299</option>
+        <option value="9300-9399">9300-9399</option>
+        <option value="9400-9499">9400-9499</option>
+        <option value="9500-9599">9500-9599</option>
+        <option value="9600-9699">9600-9699</option>
+        <option value="9700-9799">9700-9799</option>
+        <option value="9800-9899">9800-9899</option>
+        <option value="9900-9999">9900-9999</option>
+        <option value="10000-10999">10000-10999</option>
+        <option value="11000-11999">11000-11999</option>
+        <option value="12000-12999">12000-12999</option>
+        <option value="13000-13999">13000-13999</option>
+        <option value="14000-14999">14000-14999</option>
+        <option value="15000-15999">15000-15999</option>
+        <option value="16000-16999">16000-16999</option>
+        <option value="17000-17999">17000-17999</option>
+        <option value="18000-18999">18000-18999</option>
+        <option value="19000-19999">19000-19999</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect2">Person</label>
+      <select multiple class="form-control" name="annotator" id="user-dropdown">
+        {{#each usr_names}}
+            <option value="{{id}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Assign</button>
+  </form>
+</div>

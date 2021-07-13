@@ -1,0 +1,115 @@
+<link rel="stylesheet" href="/stylesheets/sidebar.css">
+<div id="container">
+          <div class="toggle-div">
+            <h6 class="text-center">Model</h6>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" id="btn-toggle-model">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="options" id="toggle-single" autocomplete="off" data-modelmode="single"> Single 
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="toggle-multiple" autocomplete="off" data-modelmode="complete"> Complete 
+                </label>
+            </div>
+        </div>
+    <div>
+        <form action="/assign/assign-user" method="POST">
+            <p class="text-center">Choose File</p>
+            <select class="form-control" id="file-selector" name="objectId">
+            {{#each hello}}
+                <option value="{{this}}">{{this}}</option>
+            {{/each}}
+            </select>
+            <p id="finish-set">Finsh: <br>
+            </p>
+            
+            <p id="inprogress-set">In progress: <br>
+            </p>
+            <p>Add a new person:</p>
+        
+            <select class="form-control" name="annotator" id="user-dropdown">
+                {{!-- {{#each usr_names}}
+                    <option value="{{id}}">{{name}}</option>
+                {{/each}} --}}
+            </select>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Annotation Detail</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6 id="txt-product-category">Product Category: </h6>
+        <h6 id="txt-material-category">Material Category: </h6>
+        <h6 id="txt-sub-material-category">Sub Material Category: </h6>
+        <h6 id="txt-main-process">Main Process Category: </h6>
+        <h6 id="txt-main-process-sub">Main Process Sub Category: </h6>
+        <h6 id="txt-sec-process">Second Process Category: </h6>
+        <h6 id="txt-sec-process-sub">Second Process Sub Category: </h6>
+        <h6 id="txt-assigned-by">Assigned By: </h6>
+        <h6 id="txt-finish-time">Finish Time: </h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $( "p#finish-set, p#inprogress-set").on('click', 'a.modal-trigger', function(){
+    $.ajax({
+      url: "/assign/annotation",
+      method: "POST",
+      data: {
+        oid: $('#file-selector').val(),
+        uid: $(this).data('uid')
+      }
+    }).done(res => {
+      $('#txt-product-category').text('Product Category: ')
+      $('#txt-material-category').text('Material Category: ')
+      $('#txt-sub-material-category').text('Sub Material Category: ')
+      $('#txt-main-process').text('Main Process Category: ')
+      $('#txt-main-process-sub').text('Main Process Sub Category: ')
+      $('#txt-sec-process').text('Second Process Category: ')
+      $('#txt-sec-process-sub').text('Second Process Sub Category: ')
+      $('#txt-assigned-by').text('Assigned By: ')
+      $('#txt-finish-time').text('Finish Time: ')
+      if (res['productCategory']) {
+        $('#txt-product-category').text($('#txt-product-category').text()+res['productCategory'])
+      }
+      if (res['materialCategory']) {
+        $('#txt-material-category').text($('#txt-material-category').text()+res['materialCategory'])
+      }
+      if (res['subMaterialCategory']) {
+        $('#txt-sub-material-category').text($('#txt-sub-material-category').text()+res['subMaterialCategory'])
+      }
+      if (res['main-process-category']) {
+        $('#txt-main-process').text($('#txt-main-process').text()+res['mainProcessCategory'])
+      }
+      if (res['subMainProcessCategory']) {
+        $('#txt-main-process-sub').text($('#txt-main-process-sub').text()+res['subMainProcessCategory'])
+      }
+      if (res['secondProcessCategory']) {
+        $('#txt-sec-process').text($('#txt-sec-process').text()+res['secondProcessCategory'])
+      }
+      if (res['subSecondProcessCategory']) {
+        $('#txt-sec-process-sub').text($('#txt-sec-process-sub').text()+res['subSecondProcessCategory'])
+      }
+      if (res['assignedBy']) {
+        $('#txt-assigned-by').text($('#txt-assigned-by').text()+res['assignedBy'])
+      }
+      if (res['finishTime']) {
+        $('#txt-finish-time').text($('#txt-finish-time').text()+new Date(res['finishTime']['_seconds']*1000).toGMTString())
+      }
+    });
+  });
+</script>

@@ -1,0 +1,8 @@
+/node_modules
+/secrets.js
+
+.DS_Store
+
+public/images/CAD/
+public/abc_dataset
+public/obj_GIF

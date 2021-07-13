@@ -1,0 +1,16 @@
+form {
+    height: calc(100vh - 56px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div#form-inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div#form-inner-inner {
+    width: 400px;
+}
