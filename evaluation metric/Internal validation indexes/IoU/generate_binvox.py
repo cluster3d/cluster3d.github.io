@@ -39,8 +39,6 @@ def remove(file_types):
 remove([])
 
 
-# In[3]:
-
 
 def temp_binvox(temp_export_path):
     output = subprocess.run('export LD_PRELOAD=/share/apps/local/lib/libGL.so; xvfb-run -d -w 0 {} -d {} {}'.format(binvox_program_path, dimension, temp_export_path),
@@ -116,17 +114,6 @@ for obj_name in tqdm(os.listdir(data_dir)[start:end]):
     mesh_npy(mesh, 'normalized', obj_name, obj_dir)
 
 
-# In[ ]:
-
-
-# obj_name = "00049759"
-# obj_dir = os.path.join(data_dir, obj_name)
-# files = os.listdir(obj_dir)
-# obj_path = os.path.join(obj_dir,files[0])
-# mesh = trimesh.load_mesh(obj_path)
-
-
-# In[10]:
 
 
 def test():
@@ -155,10 +142,5 @@ def test():
     ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
     ps.print_stats()
     print(s.getvalue())
-
-
-# In[ ]:
-
-
 
 
