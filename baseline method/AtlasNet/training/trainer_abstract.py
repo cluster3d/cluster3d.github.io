@@ -14,7 +14,6 @@ class TrainerAbstract(object):
     """
     This class implements an abtsract deep learning trainer. It is supposed to be generic for any data, task, architecture, loss...
     It defines the usual generic fonctions.
-    Author : Thibault Groueix 01.11.2019
     """
 
     def __init__(self, opt):

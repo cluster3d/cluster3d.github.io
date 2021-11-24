@@ -3,9 +3,7 @@ import os
 import sys
 import time
 
-"""
-    Author : Thibault Groueix 01.11.2019
-"""
+
 
 
 def is_port_in_use(port):

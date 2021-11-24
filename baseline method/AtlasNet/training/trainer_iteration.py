@@ -4,7 +4,6 @@ from termcolor import colored
 class TrainerIteration(object):
     """
         This class implements all functions related to a single forward pass of Atlasnet.
-        Author : Thibault Groueix 01.11.2019
     """
 
     def __init__(self):

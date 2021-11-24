@@ -9,7 +9,6 @@ import auxiliary.init_html_report as init_html_report
 def main(trainer, outHtml=None):
     """
     Create a report for the completed experiment.
-    Author : Thibault Groueix 01.11.2019
     """
 
     if outHtml is None:

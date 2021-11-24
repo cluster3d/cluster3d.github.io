@@ -12,7 +12,6 @@ import numpy as np
 class TrainerLoss(object):
     """
     This class implements all functions related to the loss of Atlasnet, mainly applies chamfer and metro.
-    Author : Thibault Groueix 01.11.2019
     """
 
     def __init__(self):

@@ -6,9 +6,7 @@ import os
 import subprocess
 from shutil import copy
 
-"""
-        Author : Thibault Groueix 01.11.2019
-"""
+
 
 
 def metro(path1, path2, metro='./auxiliary/metro_sources/build/metro'):

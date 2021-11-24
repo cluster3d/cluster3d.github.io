@@ -5,11 +5,6 @@ import time
 import torch
 from auxiliary.my_utils import yellow_print
 
-"""
-Main training script.
-author : Thibault Groueix 01.11.2019
-"""
-
 opt = argument_parser.parser()
 torch.cuda.set_device(opt.multi_gpu[0])
 my_utils.plant_seeds(random_seed=opt.random_seed)

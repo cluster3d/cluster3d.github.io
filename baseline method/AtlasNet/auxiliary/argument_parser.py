@@ -7,9 +7,7 @@ from termcolor import colored
 from easydict import EasyDict
 from os.path import exists, join
 
-"""
-    Author : Thibault Groueix 01.11.2019
-"""
+
 
 
 def parser():
