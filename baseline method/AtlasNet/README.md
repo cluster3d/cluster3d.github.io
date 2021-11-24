@@ -39,18 +39,3 @@ The dataset loaded is modified to be the Cluster3d dataset in the following file
 - https://github.com/cluster3d/cluster3d.github.io/blob/main/baseline%20method/AtlasNet/dataset/trainer_dataset.py
 - https://github.com/cluster3d/cluster3d.github.io/blob/main/baseline%20method/AtlasNet/dataset/dataset_abc2.py
 
-
-
-### Citing this work
-
-```
-@inproceedings{groueix2018,
-          title={{AtlasNet: A Papier-M\^ach\'e Approach to Learning 3D Surface Generation}},
-          author={Groueix, Thibault and Fisher, Matthew and Kim, Vladimir G. and Russell, Bryan and Aubry, Mathieu},
-          booktitle={Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
-          year={2018}
-        }
-```
-<p align="center">
-  <img  src="doc/pictures/plane.gif">
-</p>
