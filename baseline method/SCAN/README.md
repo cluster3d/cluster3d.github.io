@@ -3,6 +3,7 @@ This code is adapted from the original implementation of SCAN: Learning to Class
 
 Paper: [**SCAN: Learning to Classify Images without Labels**](https://arxiv.org/pdf/2005.12320.pdf)
 
+Original implementation: https://github.com/wvangansbeke/Unsupervised-Classification
 
 ## Installation
 The code runs with recent Pytorch versions, e.g. 1.4. 
