@@ -1,5 +1,6 @@
 This code is based on the original AtlasNet implementation. The following readme has details linking the original AtlasNet implementation as well as how to run the models for the Cluster3d dataset. The license from the original implementation has been included in the folder.
 
+Original repository: [AtlasNet](https://github.com/ThibaultGROUEIX/AtlasNet)
 
 **AtlasNet: A Papier-Mâché Approach to Learning 3D Surface Generation** <br>
 Thibault Groueix,  Matthew Fisher, Vladimir G. Kim , Bryan C. Russell, Mathieu Aubry  <br>
@@ -36,6 +37,6 @@ cd auxiliary
   
 Run `train.py` with arguments specified in `auxiliary/argument_parser`.
 The dataset loaded is modified to be the Cluster3d dataset in the following files:
-- https://github.com/cluster3d/cluster3d.github.io/blob/main/baseline%20method/AtlasNet/dataset/trainer_dataset.py
-- https://github.com/cluster3d/cluster3d.github.io/blob/main/baseline%20method/AtlasNet/dataset/dataset_abc2.py
+- [trainer_dataset.py](https://github.com/cluster3d/cluster3d.github.io/blob/main/baseline%20method/AtlasNet/dataset/trainer_dataset.py)
+- [dataset_abc2.py](https://github.com/cluster3d/cluster3d.github.io/blob/main/baseline%20method/AtlasNet/dataset/dataset_abc2.py)
 
