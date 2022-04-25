@@ -18,7 +18,6 @@ class Trainer(TrainerAbstract, TrainerLoss, TrainerIteration, TrainerDataset, Tr
         """
         Main Atlasnet class inheriting from the other main modules.
         It implements all functions related to train and evaluate for an epoch.
-        Author : Thibault Groueix 01.11.2019
         :param opt:
         """
 

@@ -2,9 +2,7 @@ import os
 import gpustat
 import time
 
-"""
-    Author : Thibault Groueix 01.11.2019
-"""
+
 
 class Experiments(object):
     def __init__(self):

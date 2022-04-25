@@ -64,7 +64,7 @@ def parse_args():
     parser.add_argument('--checkpoints', type=int, default=25000,
                         help='how many iterations between two checkpoints (default: 25000)')
     parser.add_argument('--seed', type=int, default=31, help='random seed (default: 31)')
-    parser.add_argument('--exp', type=str, default='/data2/ABC2/deshana_logs/logs_deshana_100epochs_100clusters/point_cloud', help='path to exp folder')
+    parser.add_argument('--exp', type=str, default='/data2/ABC2/logs/logs_100epochs_100clusters/point_cloud', help='path to exp folder')
     parser.add_argument('--verbose', action='store_true', help='chatty')
     return parser.parse_args()
 
@@ -74,7 +74,7 @@ def main(args):
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed_all(args.seed)
     np.random.seed(args.seed)
-    args.exp = '/data2/ABC2/deshana_logs/logs_100epochs_{}clusters/point_cloud'.format(args.nmb_cluster)
+    args.exp = '/data2/ABC2/logs/logs_100epochs_{}clusters/point_cloud'.format(args.nmb_cluster)
     print("Setting exp to ",args.exp)
 
     # pointnet

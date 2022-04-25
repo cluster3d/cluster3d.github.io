@@ -7,10 +7,10 @@ from tqdm import tqdm
 
 import time
 
-mat = np.load('/home/desai/similarity.npz')
+mat = np.load('/home/similarity.npz')
 matrix = csr_matrix((mat['data'], mat['indices'], mat['indptr'])).toarray()
 # nonzero = ground_matrix.nonzero()
-indices = open("/home/desai/obj.csv","r").read().replace("\n","")
+indices = open("/home/obj.csv","r").read().replace("\n","")
 indices = np.array([int(item) for item in indices.split(",") ])
 def cluster_accuracy(y_true, y_predicted, cluster_number: Optional[int] = None):
     """

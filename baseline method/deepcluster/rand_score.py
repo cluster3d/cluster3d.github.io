@@ -9,10 +9,10 @@ def custom_rand_score(y_predicted, y_true):
     :param y_true: list of true cluster numbers, an integer array 0-indexed    
     :param y_true: list of model indices, an integer array 0-indexed
     """     
-    mat = np.load('/home/desai/similarity.npz')
+    mat = np.load('/home/similarity.npz')
     matrix = csr_matrix((mat['data'], mat['indices'], mat['indptr'])).toarray()
     # nonzero = ground_matrix.nonzero()
-    indices = open("/home/desai/obj.csv","r").read().replace("\n","")
+    indices = open("/home/obj.csv","r").read().replace("\n","")
     indices = np.array([int(item) for item in indices.split(",") ])
 
 

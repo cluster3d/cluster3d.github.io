@@ -5,7 +5,6 @@ from termcolor import colored
 
 
 """
-    Author : Thibault Groueix 01.11.2019
 """
 
 def grey_print(x):

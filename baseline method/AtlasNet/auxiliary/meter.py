@@ -25,7 +25,6 @@ class AverageValueMeter(object):
 
 class Logs(object):
     """
-    Author : Thibault Groueix 01.11.2019
     """
 
     def __init__(self, curves=[]):

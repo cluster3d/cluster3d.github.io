@@ -59,7 +59,7 @@ def main():
     
 #     # Model
     print(colored('Get model', 'blue'))
-    model = get_model(p, "/home/desai/bkp_AtlasNet/logs/atlasnet_bottleneck_size_1024/encoder.pth")
+    model = get_model(p, "/home/bkp_AtlasNet/logs/atlasnet_bottleneck_size_1024/encoder.pth")
     print(model)
 
     # Optimizer
